@@ -14,7 +14,7 @@ function reqListener() {
     var filmesAction = data.movies.action;
     var resultadoHTML = '';
     for (var i = 0; i < 5; i++) {
-        resultadoHTML = resultadoHTML + '<li class="lista-filmes" onmouseenter="seeBanner(\'Titulo do Filme\')"><img class="poster" src=' + filmesAction[i].Poster + '>' + '<h4 class="title">' + filmesAction[i].Title + '</h4></li>';
+        resultadoHTML = resultadoHTML + '<li class="lista-filmes" onclick="seeBanner(\'Titulo do Filme\')"><img class="poster" src=' + filmesAction[i].Poster + '>' + '<h4 class="title">' + filmesAction[i].Title + '</h4></li>';
     }
     resultado.innerHTML = resultadoHTML;   
 }
@@ -24,6 +24,8 @@ function seeBanner(title) {
     var movieTitle = document.getElementById('movie-title');
 
     movieTitle.innerHTML = title;
+
+    window.scrollTo(0, 200);
 
     banner.classList.toggle('movie-banner-visible');
 }

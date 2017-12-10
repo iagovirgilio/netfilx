@@ -9,6 +9,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: #000;
+    min-height: 880px;
 
 }
 .imagem-fundo{
@@ -175,12 +176,19 @@ h4{
 
 .movie-banner{
     background-color: green;
-    display: none;
-    width: 100%;
-    height: 300px;
+    visibility: hidden;
+    width: 1%;
+    border-radius: 100px;
+    height: 10px;
+    transition: all 2s;
 }
 
 
 .movie-banner-visible {
-    display: block;
+    background-color: rgba(0, 128, 0, 0.363);
+    border-radius: 0px;
+    width: 100%;
+    height: 300px;
+    visibility: visible;
+    transform: rotate(360deg);
 }
